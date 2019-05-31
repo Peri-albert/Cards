@@ -99,7 +99,7 @@ page {
 	<view class="container">
 		<movable-area>
 				<movable-view wx:if="{{!isInAnimation}}" class="{{goLeft ? 'toleft' : ''}} {{goRight ? 'toright' : ''}}" direction="all" out-of-bounds="{{true}}" x="{{x}}" y="{{y}}" bindchange="onChange" catchtouchend="onCancel">
-					<image class="card" src="../images/funny_cat_{{index + 1}}.png" bindload="loaded">
+					<image class="card" src="../images/funny_cat_{{index + 1}}.jpg" bindload="loaded">
 					</image>
 				</movable-view>
 		</movable-area>
@@ -111,12 +111,12 @@ import wepy from 'wepy'
 
 export default class Index extends wepy.page {
 	config = {
-		navigationBarTitleText: 'S. M.'
+		navigationBarTitleText: '左右滑卡片'
 	}
 	components = {}
 
 	data = {
-		book17Texts: ["S.M. Soul Mate","四年了，喜欢你也四年了","思来想去，决定还是大胆的地表白一次","大一的时候只是被你某个瞬间的背影所着迷","而后，我用了三年时间，去询问自己，到底是不是荷尔蒙的作怪","抑或是喜欢着自己的一个臆想","后来才确认我是真的喜欢你，你这个人","喜欢你撸猫时满眼的善良","喜欢慵懒的背后隐藏着的那双想要玩遍世界的腿和品尽美食的嘴","喜欢你的那句“我是个好女孩”","这四年时间，看着你身上发生了许许多多事情","也目睹了你的高兴开心与尴尬抱怨","特别是那句“男生都是演员”","虽然不知道在你身边发生了什么，但还是希望你依旧相信世界的美好","希望你的好运如“蜜蜂手链”般失而复得","希望你的未来如“天鹅项链”般恒久璀璨","未来路上，希望有你"],
+		book17Texts: [],
 		currentItem: {},
 		index: 0,
 		x: 0,
